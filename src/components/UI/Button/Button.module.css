@@ -1,0 +1,29 @@
+@import url('/src/utils/colors.css');
+.button {
+	font: inherit;
+	background: var(--primary-red);
+	border: 1px solid var(--primary-red);
+	color: #fff;
+	margin: 0.5rem auto;
+	font-size: 1.1em;
+	padding: 0.6rem 1.2rem;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.button:hover,
+.button:active {
+	background: var(--primary-red);
+	border-color: var(--primary-red);
+}
+
+.button:focus {
+	outline: none;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+	background: var(--primary-red-disabled);
+	border-color: var(--primary-border-disabled);
+}

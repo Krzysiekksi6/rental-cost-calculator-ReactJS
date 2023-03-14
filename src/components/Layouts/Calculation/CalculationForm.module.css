@@ -1,0 +1,14 @@
+.title {
+	margin: 1rem;
+	text-align: center;
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.error-text {
+	color: var(--error-text);
+}

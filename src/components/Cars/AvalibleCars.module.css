@@ -1,0 +1,33 @@
+@import url('/src/utils/colors.css');
+
+.avalible-cars {
+	max-width: 60rem;
+	width: 90%;
+	margin: 2rem auto;
+	background-color: var(--primary-light);
+	animation: cars-appear 1s ease-out forwards;
+	background-color: #f2f5fb;
+}
+
+.avalible-cars ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.http-error {
+  text-align: center;
+  color: var(--error-text);
+}
+
+@keyframes cars-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

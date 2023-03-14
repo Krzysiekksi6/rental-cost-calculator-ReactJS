@@ -1,0 +1,16 @@
+:root {
+    --primary-gray: #f2f5fb;
+    --primary-light: #ffffff;
+    --secondary--light-gray: #ccc;
+    --primary-red: #ff4605;
+    --primary-red-disabled: #d16239;
+    --primary-border-disabled: #c6b8b4;
+    --secondary-gray: #333;
+    --secondary-font-color: #eee;
+    --error-text: #f70000;
+    --fuel-color: #55a309;
+    --box-shadow: #929090;
+    --black: #000;
+    --completed: #ef5016;
+}
+

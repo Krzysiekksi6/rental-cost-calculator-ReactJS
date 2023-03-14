@@ -1,0 +1,41 @@
+@import url('/src/utils/colors.css');
+
+.container {
+    padding: 1rem 2rem;
+}
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    border: 2px solid  var(--primary-red);
+}
+
+.completed {
+    color: var(--primary-light);
+    background-color: var(--primary-red);
+    border: 2px solid  transparent;
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 1.5rem 3rem;
+    }
+
+    .step {
+        width: 40px;
+        height: 40px;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+
+    .completed {
+        background-color: var(--completed);
+    }
+}

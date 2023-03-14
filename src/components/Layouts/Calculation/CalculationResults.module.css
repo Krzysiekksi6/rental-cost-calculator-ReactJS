@@ -1,0 +1,31 @@
+@import url('/src/utils/colors.css');
+.results {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.price {
+	border-bottom: 2px solid var(--secondary--light-gray);
+}
+
+.column {
+	margin: 0 auto;
+	height: auto;
+}
+
+.heading {
+	font-weight: 700;
+}
+
+.price {
+	color: var(--primary-red);
+	font-weight: 700;
+}
+
+.category {
+	font-weight: 600;
+	color: var(--primary-red);
+	border-bottom: 2px solid var(--secondary--light-gray);
+}
