@@ -1,6 +1,11 @@
 # Rent Cost Calculator
 
-![Design preview for the mobile](./design/mobile.jpg)
+<p align="center">
+  <a href="https://krzysiekksi6.github.io/rental-cost-calculator-ReactJS/" target="_blank" rel="noopener noreferrer">
+    <img width="130" src="./design/mobile.jpg" alt="Mobile view of this app">
+  </a>
+</p>
+
 ## Welcome! 👋
 
 This is my proposal for an app that calculates the cost of renting a car
