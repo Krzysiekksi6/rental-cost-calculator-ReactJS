@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://krzysiekksi6.github.io/rental-cost-calculator-ReactJS/" target="_blank" rel="noopener noreferrer">
-    <img width="130" src="./design/mobile.jpg" alt="Mobile view of this app">
+    <img width="180" src="./design/mobile.jpg" alt="Mobile view of this app">
   </a>
 </p>
 
