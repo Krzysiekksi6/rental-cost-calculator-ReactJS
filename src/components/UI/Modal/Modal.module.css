@@ -13,6 +13,7 @@
     top: 10vh;
     left: 3.5%;
     width: 85%;
+    max-height: 90vh;
     padding: 1rem;
     background-color: var(--primary-light);
     border-radius: 14px;

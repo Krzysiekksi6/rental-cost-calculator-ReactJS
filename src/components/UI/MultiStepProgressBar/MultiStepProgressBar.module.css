@@ -23,6 +23,13 @@
 
 }
 
+.completed__gold {
+    color: var(--primary-light);
+    background-color: #ffb703;
+    border: 2px solid  transparent;
+
+}
+
 @media (min-width: 768px) {
     .container {
         padding: 1.5rem 3rem;

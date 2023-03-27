@@ -14,7 +14,9 @@ const AvalibleCars = () => {
 			);
 
 			if (!response.ok) {
-				throw new Error('Something went wrong, you cannot connect to database...');
+				throw new Error(
+					'Something went wrong, you cannot connect to database...'
+				);
 			}
 
 			const responseData = await response.json();
@@ -75,11 +77,9 @@ const AvalibleCars = () => {
 	));
 
 	return (
-		<section className={classes['avalible-cars']}>
-			<Card>
-				<ul>{carsList}</ul>
-			</Card>
-		</section>
+		<Card className={classes['avalible-cars']}>
+			<ul>{carsList}</ul>
+		</Card>
 	);
 };
 

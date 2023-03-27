@@ -26,6 +26,7 @@
 	border-color: var(--primary-red);
 }
 
+.invalid,
 .invalid label {
 	color: #ca3e51;
 }

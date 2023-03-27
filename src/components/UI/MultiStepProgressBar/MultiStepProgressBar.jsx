@@ -8,7 +8,7 @@ const MultiStepProgressBar = (props) => {
 		<div className={classes.container}>
 			<ProgressBar
 			className={classes.progress}
-				percent={((props.step - 1) * 100) / 2}
+				percent={((props.step - 1) * 100) / 3}
 				filledBackground='linear-gradient(to right, #db9f8a, #db6a41)'>
 				<Step transition='scale'>
 					{({ accomplished, index }) => (
@@ -37,6 +37,16 @@ const MultiStepProgressBar = (props) => {
 								accomplished ? classes.completed : ''
 							}`}>
 							3
+						</div>
+					)}
+				</Step>
+				<Step transition='scale'>
+					{({ accomplished, index }) => (
+						<div
+							className={`${classes.step} ${
+								accomplished ? classes.completed__gold : ''
+							}`}>
+							4
 						</div>
 					)}
 				</Step>

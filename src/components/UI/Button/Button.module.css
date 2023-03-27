@@ -9,8 +9,12 @@
 	padding: 0.6rem 1.2rem;
 	cursor: pointer;
 	border-radius: 10px;
+	transition: transform .3s;
 }
 
+.button:hover {
+	transform: scale(1.05);
+}
 .button:hover,
 .button:active {
 	background: var(--primary-red);

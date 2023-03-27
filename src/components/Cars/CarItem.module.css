@@ -1,75 +1,55 @@
 @import url('/src/utils/colors.css');
 .car {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 0.5rem;
+	margin: 0.5rem 0;
 	padding-bottom: 1rem;
-	border-bottom: 2px solid var(--secondary--light-gray);
-}
-
-.car__title {
-	font-weight: 700;
-	margin: 2rem 0;
-}
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-.description {
-	margin: 1rem;
-	font-size: 0.97em;
-	font-weight: 700;
-}
-
-.value {
-	color: var(--primary-red);
-	font-weight: 700;
-	letter-spacing: 0.5px;
+	border-radius: 10px;
+	background-color: #f2f5fb;
 }
 
 .image {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
+	margin: 1rem auto 0;
+	border-radius: 5px;
+	max-width: 100%;
+	max-height: 50%;
 }
 
 .image img {
 	object-fit: cover;
-	width: 90%;
-	border-radius: 10px;
-	box-shadow: 2px 2px 5px var(--box-shadow);
+	max-width: 100%;
+	border-radius: 2px;
 }
 
-.fuel {
-	width: 4rem;
-	height: 4rem;
-	margin: 0.5rem ;
-	background-color: var(--fuel-color);
-	color: #fff;
-	text-align: center;
-	border-radius: 1px;
-	padding-top: 0.1rem;
-	padding-bottom: 0.2rem;
+.heading {
+	margin-left: 1rem;
 }
 
-.fuel__type {
-	font-size: 0.9em;
-	margin-top: 0.5em;
+.car__title {
+	font-weight: 600;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.fuel__price {
-	font-size: 0.85em;
+.description {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	margin-left: 1rem;
+	font-size: 0.97em;
 }
 
-.fuel__price--bold {
-	font-size: 1.3em;
-	font-weight: bold;
+
+.value {
+	letter-spacing: 0.5px;
+	margin-left: 5px;
 }
 
 
@@ -77,24 +57,10 @@
 	margin-top: 1rem;
 }
 
-.basic {
-	color: #000;
-	font-weight: 600;
-}
-
-.standard {
-	color: #484e55;
-}
-
-.medium {
-	color: #282bbe;
-}
-
-.premium {
-	color: #ffb703;
-}
-
 @media (min-width: 768px) {
+	.car {
+		width: 45%;
+	}
 	.image img {
 		width: 80%;
 	}
@@ -102,8 +68,7 @@
 
 @media (min-width: 992px) {
 	.car {
-		margin-left: 4rem;
-		margin-right: 4rem;
+		width: 30%;
 		border-bottom: 3px solid var(--secondary--light-gray);
 	}
 
