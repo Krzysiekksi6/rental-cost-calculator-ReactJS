@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './Checkbox.module.css';
-const Checkbox = ({ id, label, checked, ...props }) => {
-	const [isChecked, setIsChecked] = useState(false);
+const Checkbox = ({
+	id,
+	name,
+	label,
+	register,
+	errors,
+	checked,
+	required,
+	onChange,
+	...props
+}) => {
+	
 	return (
 		<div className={classes['checkbox-wrapper']}>
 			<label>
 				<input
 					id={id}
-					className={isChecked ? classes.checked : ''}
+					name={name}
+					className={checked ? classes.checked : ''}
 					type='checkbox'
-					checked={isChecked}
-					onChange={() => setIsChecked((prev) => !prev)}
+					{...field}
+					checked={checked}
+					{...register(name, { required: true })}
+					errors={errors}
+					onChange={onChange}
 					{...props}
 				/>
 				{label}

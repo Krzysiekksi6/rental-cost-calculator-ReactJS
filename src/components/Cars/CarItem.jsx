@@ -25,6 +25,7 @@ const CarItem = (props) => {
 		avgFuelConsumption: 0,
 		amountOfAvaliable: 0,
 		category: '',
+		fuelPrice: ''
 	});
 	const rentCarHandler = () => {
 		setIsShow(true);
@@ -37,11 +38,12 @@ const CarItem = (props) => {
 			avgFuelConsumption: props.avgFuelConsumption,
 			amountOfAvaliable: props.amountOfAvaliable,
 			category: props.category,
+			fuelPrice: props.fuelPrice
 		});
 	};
 
 	const basicInformationData = [
-		{	
+		{
 			label: props.basePrice,
 			icon: faDollarSign,
 		},
@@ -58,14 +60,14 @@ const CarItem = (props) => {
 			icon: faTags,
 		},
 		{
-			label: FUEL_PRICE,
+			label: props.fuelPrice,
 			icon: faGasPump,
 		},
 	];
 
 	const information = basicInformationData.map((item) => (
 		<div key={item.label} className={classes.info}>
-			<FontAwesomeIcon icon={item.icon} style={{color: '#ff4606'}}/>
+			<FontAwesomeIcon icon={item.icon} style={{ color: '#ff4606' }} />
 			<span className={classes.value}>{item.label}</span>
 		</div>
 	));
@@ -79,7 +81,6 @@ const CarItem = (props) => {
 	// 	document.addEventListener('click', hideOnClickOutside, true);
 	// }, []);
 
-	
 	const modalContent = (
 		<React.Fragment>
 			<CalculationForm car={car} onCloseModal={closeModal} />
@@ -97,9 +98,7 @@ const CarItem = (props) => {
 				<p>Basic information</p>
 			</div>
 			<div className={classes.content}>
-				<div className={classes.description}>
-					{information}
-				</div>
+				<div className={classes.description}>{information}</div>
 
 				<div className={classes.actions}>
 					<Button type='button' onClick={rentCarHandler}>

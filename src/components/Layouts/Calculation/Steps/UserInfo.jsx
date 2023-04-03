@@ -57,7 +57,7 @@ const UserInfo = ({ errors, register, category, getValues }) => {
 
 			<Input
 				id='driving_license_year'
-				label='Year of issuance of the driving license'
+				label='The year of receiving the driving license'
 				name='driving_license_year'
 				type='number'
 				errors={errors}

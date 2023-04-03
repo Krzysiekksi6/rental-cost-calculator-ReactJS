@@ -19,7 +19,8 @@
 		"react-date-range": "^1.4.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.43.7",
-		"react-step-progress-bar": "^1.0.3"
+		"react-step-progress-bar": "^1.0.3",
+		"uuid": "^9.0.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.27",

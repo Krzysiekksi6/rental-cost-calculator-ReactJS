@@ -18,7 +18,7 @@ const CalculationForm = (props) => {
 		formState: { errors, isValid },
 	} = useForm({ mode: 'all' });
 	const [page, setPage] = useState(0);
-	const FormtTitles = ['Personal Info', 'Rent Car Info', 'Summary'];
+	const FormtTitles = ['Personal Info', 'Rent Car Info', 'Summary Info'];
 	const refOne = useRef(null);
 	useEffect(() => {
 		document.addEventListener('keydown', hideOnEscape, true);
@@ -67,9 +67,16 @@ const CalculationForm = (props) => {
 		} else if (page === 1) {
 			return <RentInfo errors={errors} register={register} />;
 		} else if (page === 2) {
-			return <OtherInfo errors={errors} register={register} car={props.car} userData={getValues} />;
+			return (
+				<OtherInfo
+					errors={errors}
+					register={register}
+					car={props.car}
+					userData={getValues}
+				/>
+			);
 		} else if (page === 3) {
-			return <CalculationResult />;
+			return <CalculationResult car={props.car} userData={getValues} />;
 		}
 	};
 
@@ -91,13 +98,18 @@ const CalculationForm = (props) => {
 		);
 	};
 
+	const onKeyDownHandler = (event) => {
+		event.key === 'Enter' && isValid ? nextPageButtonHandler() : null;
+	};
+
 	return (
 		<React.Fragment>
 			<MultiStepProgressBar step={page + 1} />
 			<form
 				ref={refOne}
 				className={classes['form']}
-				onSubmit={handleSubmit(submitHandler)}>
+				onSubmit={handleSubmit(submitHandler)}
+				onKeyDown={onKeyDownHandler}>
 				<div className={classes['form__header']}>
 					<h2>{FormtTitles[page]}</h2>
 				</div>
@@ -113,7 +125,7 @@ const CalculationForm = (props) => {
 					)}
 					{page !== 3 && renderButton()}
 				</div>
-				{/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+				<pre>{JSON.stringify(watch(), null, 2)}</pre>
 			</form>
 		</React.Fragment>
 	);

@@ -1,0 +1,17 @@
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.p {
+    padding: 0;
+}
+
+.label {
+    font-style: italic;
+}
+
+.data {
+    margin-left: 0.3rem;
+    font-weight: bold;
+}

@@ -10,7 +10,7 @@ const AvalibleCars = () => {
 	useEffect(() => {
 		const fetchCars = async () => {
 			const response = await fetch(
-				'https://food-order-app-55062-default-rtdb.firebaseio.com/cars.json'
+				'https://rent-car-calculator-default-rtdb.europe-west1.firebasedatabase.app/cars.json'
 			);
 
 			if (!response.ok) {
@@ -33,6 +33,7 @@ const AvalibleCars = () => {
 					avgFuelConsumption: responseData[key].avgFuelConsumption,
 					amountOfAvaliable: responseData[key].amountOfAvaliable,
 					category: responseData[key].category,
+					fuelPrice: responseData[key].fuelPrice,
 				});
 			}
 
@@ -73,6 +74,7 @@ const AvalibleCars = () => {
 			avgFuelConsumption={+item.avgFuelConsumption}
 			amountOfAvaliable={+item.amountOfAvaliable}
 			category={item.category}
+			fuelPrice={+item.fuelPrice}
 		/>
 	));
 

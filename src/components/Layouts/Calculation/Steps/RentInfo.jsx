@@ -61,8 +61,10 @@ const RentInfo = ({ errors, register }) => {
 		<div className='rentInfo'>
 			
 			<Input
-				label='Choose your rental date'
+				id='calendar'
 				name='calendar'
+				label='Choose your rental date'
+				type='text'
 				className={classes['input-box']}
 				value={currentDataValue}
 				errors={errors}
@@ -85,7 +87,7 @@ const RentInfo = ({ errors, register }) => {
 							rangeColors={['#ff4605e0']}
 						/>
 					)}
-					{!isOpen && passData()}
+					
 				</div>
 			</div>
 			<Input
