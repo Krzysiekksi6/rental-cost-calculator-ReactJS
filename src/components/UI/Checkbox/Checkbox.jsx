@@ -20,7 +20,7 @@ const Checkbox = ({
 					name={name}
 					className={checked ? classes.checked : ''}
 					type='checkbox'
-					{...field}
+					// {...field}
 					checked={checked}
 					{...register(name, { required: true })}
 					errors={errors}
